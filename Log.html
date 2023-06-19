@@ -1,0 +1,130 @@
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title> 
+        
+    <!-- <link rel="stylesheet" href="./mysch.css"> -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+</head>
+<body>
+
+
+
+    <section id="nda" class="d-flex">
+        <div class="bg-success bg-opacity-10 col col-lg-8- d-lg-block d-none d-md-block" style="height: 800px
+        ;">
+            <div class="mx-auto" style="width: 40%; margin-top: 200px;">
+                <img width="80%" src="./Foto/nda-logo.png" alt="" >
+                <h1 class="fs-3 text-danger align-items-center d-lg-block d-md-none">NIGERIA DEFENCE ACADEMY</h1>
+                <h1 class="fs-3 text-danger align-items-center d-lg-none d-md-block d-md-align-item-center">NDA</h1>
+                
+            </div>
+        </div>
+        
+            <div id="center" class=" container col col-lg-4 p-4">
+                <div>
+                    <img  class="d-none d-lg-block" width="50%" src="./Foto/nda-logo.png" alt="" height="200px" style="margin-left: 110px;">
+                </div>
+                <div class="ms-5 d-lg-block d-none" >
+                    <h1 style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 32px">Sign in to your account</h1>
+                    <a class="text-decoration-none " id="Register" href="Mysch.html"><h3 class="fs-6 ">You don't have an account? register here!</h3></a>  
+                </div>
+                <div class="container d-lg-none" >
+                    <img width="80%" src="./Foto/nda-logo.png" alt="" height="200px" style="margin-left: 40px;">
+                    <h1 style=" margin-left: 20px; color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 25px">Sign in to your accounts</h1>
+
+                    <a  class="text-decoration-none"   href="Mysch.html"><h3 style="font-size: 12px; margin-left: 32px;">You don't have an account? register here!</h3></a>  
+                </div>  
+                
+                <!-- <h4 class="fs-6">Email <Address></Address></h4> -->
+                <!-- <input class="mt-4" type="text" placeholder="Email" id="email">
+                <input class="mt-4" type="password" placeholder="Password" id="pass"> -->
+                <div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control p-2 border-success" id="email" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control p-2 border-success" id="password">
+                    </div>
+                    <!-- <p id="forgot">Forgot Password</p> -->
+                    <button  onclick="signIn()" class="btn btn-success w-100 p-2 mt-4">SignIn</button>
+                </div>
+                <!-- <button onclick="signIn()">Sign In</button> -->
+            </div>
+            <div>
+               
+            </div>
+    </section>
+    
+   <script>
+       
+       let userInput = JSON.parse(localStorage.getItem("myschoolportal"))
+       let userFound = false 
+       const signIn = ()=>{
+           for (let index = 0; index< userInput.length; index++) {
+            if(email.value == userInput[index].email && password.value == userInput[index].password){
+                console.log(index);
+                localStorage.setItem("userInput", index)
+                userFound = true
+                break;
+            } 
+        }
+        if(userFound == true){
+            alert("User is found oo you can proceed")
+            window.location.href ="Mysch.html"
+            // window.location.href ="myschdarshboard.html"
+        } else{
+            alert("User not found try to register")
+        }
+    }
+    // let use= false
+    // userInput.map((student, i)=>{
+    //         console.log(student.name);
+    //         // console.log(student);
+    //         // console.log(i);
+    //         let all = userInput.filter((student, i) => email.value == student.em && password.value == stds.pass);
+    //         localStorage.setItem(userInput, "i")
+    //             // console.log(userInput.student);
+    //             // let userFound = true
+    //              // console.log(student);
+                 
+    //             if( userInput == true){
+    //             alert("You are doing well")
+    //             window.location.href ="myschdarshboard.html"
+
+    //         }else{
+    //             alert("Ogbonu ni ye oooo aje")
+    //         }
+
+    //     })
+
+    //         // if(email.value == userInput[i].em && password.value == userInput[i].pass){
+    //         //     console.log(userInput.student);
+    //         //     console.log(i);
+    //         //     localStorage.setItem(userInput, "index")
+    //         //     let userFound = true
+    //         //     // break;
+    //         // }
+    //     //     if(userFound == true){
+    //     //     alert("User is found oo you can proceed")
+    //     //     window.location.href ="myschdarshboard.html"
+    //     // } else{
+    //     //     alert("User not found try to register")
+    //     // }
+    //     // })
+            
+            
+    </script>
+    <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+   
+
+
+</body>
+</html>

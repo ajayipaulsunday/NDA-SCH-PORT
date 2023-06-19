@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr td{
+            border: 2px solid red;
+            text-align: center;
+            background-color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+</head>
+<body onload="displayItems()" style="background-color: green;">
+    <h1 style="text-align: center; color: white; font-size: 40px;">WELCOME TP NIGERIA DEFENCE ACADEMY</h1>
+    <div id="display"></div>
+    <table class=" table table-light" id="myTable">
+
+    </table>
+    <script>
+        var userInput =[]
+        var userInput = JSON.parse(localStorage.getItem("myschoolportal"))
+    
+        function displayItems(){
+                 display.innerHTML =""
+                myTable.innerHTML +=`
+                // <tr>
+                //     <td>S/N</td>
+                //     <td>Name</td>
+                //     <td>Email</td>
+                //     <td>Action</td>
+                //     <td>Pasword</td>
+                // </tr> 
+                `
+                for (var index = 0; index < userInput.length; index++) {
+                    console.log(userInput[index]);
+                    myTable.innerHTML += `
+                    <tr>
+                        <td> ${index +1} </td>
+                        <td>${userInput[index].firstname} ${userInput[index].lastname}</td>
+                        <td>${userInput[index].email}</td>
+                        <td>
+                            <button>Deleting</button>
+                            <button>Edit</button>
+                        </td>
+                        <td>${userInput[index].password}</td>
+                        
+                    </tr>
+                    `
+                }
+                      
+            }
+    </script>
+
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.js">
+</body>
+</html>

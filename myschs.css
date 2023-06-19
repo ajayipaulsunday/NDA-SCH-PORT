@@ -1,0 +1,37 @@
+#reg{
+    /* border: 2px solid white; */
+    margin-top: 100px;
+}
+.center input{
+    border: 1px solid green;
+    width: 50%;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 30px;
+}
+#Register{
+    color: green;
+    font-size:5px;
+}
+.center button{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: white;
+    border-radius: 10px;
+    margin-left: 15px;
+
+}.signinandsignup{
+    display: flex;
+    /* border: 2px solid red; */
+    min-height: 50px;
+    /* width: 70px; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
